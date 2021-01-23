@@ -1,0 +1,33 @@
+<h3>Cadastramento de livro</h3>
+<div class="row justify-content-center">
+    <form class="col-11 ">
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">ISBN</label>
+                <input  type="number"  [(ngModel)]="livroAdd.isbnLivro"  name="isbnLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Autor do livro</label>
+                <input [(ngModel)]="livroAdd.autorLivro" name="autorLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Título do livro</label>
+                <input [(ngModel)]="livroAdd.tituloLivro" name="tituloLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Quantidade de exemplares</label>
+                <input [(ngModel)]="livroAdd.qtdExemplares" name="qtdExemplares" class="form-control" >
+            </div>
+        </div>
+       
+      <div class="row justify-content-center">
+        <button type="submit" (click)="adicionarLivro()" class="btn btn-primary col-3 mb-3">Cadastrar</button>
+      </div>
+    </form>  
+</div>

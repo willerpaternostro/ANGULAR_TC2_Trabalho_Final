@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "trabalho-final"
+  "defaultProject": "trabalho-final",
+  "cli": {
+    "analytics": "69778f6d-6eb8-4b9f-bc4e-a8371ffa6d65"
+  }
 }

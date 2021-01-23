@@ -1,0 +1,33 @@
+<h3>Editar Livro</h3>
+<div class="row justify-content-center">
+    <form class="col-11 ">
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">ISBN</label>
+                <input  type="number"  [(ngModel)]="livroEditar.isbnLivro"  name="isbnLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Autor do livro</label>
+                <input [(ngModel)]="livroEditar.autorLivro" name="autorLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Título do livro</label>
+                <input [(ngModel)]="livroEditar.tituloLivro" name="tituloLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Quantidade de exemplares</label>
+                <input [(ngModel)]="livroEditar.qtdExemplares" name="qtdExemplares" class="form-control" >
+            </div>
+        </div>
+       
+      <div class="row justify-content-center">
+        <button type="submit" (click)="editarLivro()" class="btn btn-warning col-3 mb-3">Editar</button>
+      </div>
+    </form>  
+</div>

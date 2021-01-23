@@ -1,0 +1,33 @@
+<h3>Cadastramento de Usuário</h3>
+<div class="row justify-content-center">
+    <form class="col-11 ">
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o CPF</label>
+                <input maxlength="13" [(ngModel)]="usuarioAdd.cpf" name="isbnLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o nome completo</label>
+                <input [(ngModel)]="usuarioAdd.nome" name="autorLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o email</label>
+                <input [(ngModel)]="usuarioAdd.email" name="tituloLivro" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o telefone para contato</label>
+                <input [(ngModel)]="usuarioAdd.telefone" name="qtdExemplares" class="form-control" >
+            </div>
+        </div>
+       
+      <div class="row justify-content-center">
+        <button type="submit" (click)="adicionarUsuario()" class="btn btn-primary col-3 mb-3">Cadastrar</button>
+      </div>
+    </form>  
+</div>

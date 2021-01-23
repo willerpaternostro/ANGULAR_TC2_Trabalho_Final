@@ -1,0 +1,39 @@
+<h3>Editar Usuário</h3>
+<div class="row justify-content-center">
+    <form class="col-11 ">
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o CPF</label>
+                <input maxlength="13" [(ngModel)]="usuarioEditar.cpf" name="cpf" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o nome completo</label>
+                <input [(ngModel)]="usuarioEditar.nome" name="nome" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o email</label>
+                <input [(ngModel)]="usuarioEditar.email" name="email" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Digite o telefone para contato</label>
+                <input [(ngModel)]="usuarioEditar.telefone" name="telefone" class="form-control" >
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mb-3  col-7">
+                <label  class="form-label">Livros emprestados</label>
+                <input [(ngModel)]="usuarioEditar.qtdExemplares" name="telefone" class="form-control" >
+            </div>
+        </div>
+       
+      <div class="row justify-content-center">
+        <button type="submit" (click)="editarUsuario()" class="btn btn-primary col-3 mb-3">Cadastrar</button>
+      </div>
+    </form>  
+</div>
