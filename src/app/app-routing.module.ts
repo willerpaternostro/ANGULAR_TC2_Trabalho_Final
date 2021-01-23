@@ -14,12 +14,12 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 
 
 const routes: Routes = [
-  {path:"usuarios", component:UsuariosComponent},
-  {path:"livros", component:LivrosComponent},
-  {path:"cadastroLivro", component:CadastroComponent},
-  {path:"cadastroUsuario", component:CadastroUsuarioComponent},
-  {path:"editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:_id", component:EditarComponent},
-  {path:"editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:_id", component:EditarUsuarioComponent},
+  {path:"/usuarios", component:UsuariosComponent},
+  {path:"/livros", component:LivrosComponent},
+  {path:"/cadastroLivro", component:CadastroComponent},
+  {path:"/cadastroUsuario", component:CadastroUsuarioComponent},
+  {path:"/editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:_id", component:EditarComponent},
+  {path:"/editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:_id", component:EditarUsuarioComponent},
  // {path: "", redirectTo: "/noticias/", pathMatch: "full"}
 ];
 
