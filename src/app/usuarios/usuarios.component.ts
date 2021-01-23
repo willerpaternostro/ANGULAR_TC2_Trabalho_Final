@@ -17,6 +17,7 @@ export class UsuariosComponent implements OnInit {
     this.obterUsuarios()
   }
   obterUsuarios():void{
+    console.log("Carregando usuários...")
     this.servico.obterUsuarios().subscribe(res => { console.log(res),this.meusUsuarios = res})
   }
   excluirUsuario(id:string){

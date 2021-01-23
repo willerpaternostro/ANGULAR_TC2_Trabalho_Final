@@ -7,8 +7,8 @@
     <div class="col-1 ">Empréstimos</div>
     <div class="col-2 ">Ações</div>
 </div>
-<div *ngFor="let usuario of meusUsuarios; let i = index" class="row" style="padding:8px">
-    <div class="col-2">{{usuario.cpf}}</div>
+<div *ngFor="let usuario of meusUsuarios; let i = index" [ngClass]="(i%2 == 0 )?'bg-dark':'bg-secondary'" class="row text-white" style="padding:8px">
+    <div  class="col-2">{{usuario.cpf}}</div>
     <div class="col-3">{{usuario.nome}}</div>
     <div class="col-2">{{usuario.email}}</div>
     <div class="col-2 text-center">{{usuario.telefone}}</div>

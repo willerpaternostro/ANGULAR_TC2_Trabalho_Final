@@ -46,7 +46,7 @@ export class EditarComponent implements OnInit {
     this.autorLivro = String(this.rota.snapshot.paramMap.get("autorLivro"));
     this.tituloLivro = String(this.rota.snapshot.paramMap.get("tituloLivro"));
     this.qtdExemplares = Number( this.rota.snapshot.paramMap.get("qtdExemplares"));
-    this.id = String( this.rota.snapshot.paramMap.get("id"));
+    this.id = String( this.rota.snapshot.paramMap.get("_id"));
 
     this.livroEditar.isbnLivro = this.isbnLivro
     this.livroEditar.autorLivro = this.autorLivro
@@ -55,7 +55,7 @@ export class EditarComponent implements OnInit {
     this.livroEditar._id = this.id
   }
   editarLivro(){
-    console.log("Notícia publicada");
+    console.log("Editando livro ...");
     this.servico.editarLivro(this.livroEditar).subscribe(res => {console.log(res),this.resultadoAdd=res,this.retorno()});
   }
   retorno():void{

@@ -8,7 +8,7 @@
 </div>
     
     
-<div *ngFor="let livro of meusLivros; let i = index" class='row' style='padding:8px' >
+<div *ngFor="let livro of meusLivros; let i = index" [ngClass]="(i%2 == 0 )?'bg-dark':'bg-secondary'" class='row text-white' style='padding:8px' >
     <div class="col-3">{{livro.isbnLivro}}</div>
     <div class="col-3">{{livro.autorLivro}}</div>
     <div class="col-3">{{livro.tituloLivro}}</div>
