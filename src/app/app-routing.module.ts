@@ -14,13 +14,13 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 
 
 const routes: Routes = [
-  {path:"/usuarios", component:UsuariosComponent},
-  {path:"/livros", component:LivrosComponent},
-  {path:"/cadastroLivro", component:CadastroComponent},
-  {path:"/cadastroUsuario", component:CadastroUsuarioComponent},
-  {path:"/editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:_id", component:EditarComponent},
-  {path:"/editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:_id", component:EditarUsuarioComponent},
- // {path: "", redirectTo: "/noticias/", pathMatch: "full"}
+  {path:"TC2_Trabalho_Final/usuarios", component:UsuariosComponent},
+  {path:"TC2_Trabalho_Final/livros", component:LivrosComponent},
+  {path:"TC2_Trabalho_Final/cadastroLivro", component:CadastroComponent},
+  {path:"TC2_Trabalho_Final/cadastroUsuario", component:CadastroUsuarioComponent},
+  {path:"TC2_Trabalho_Final/editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:_id", component:EditarComponent},
+  {path:"TC2_Trabalho_Final/editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:_id", component:EditarUsuarioComponent},
+  //{path: "",pathMatch: "full"}
 ];
 
 @NgModule({
