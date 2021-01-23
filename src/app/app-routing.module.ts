@@ -18,8 +18,8 @@ const routes: Routes = [
   {path:"livros", component:LivrosComponent},
   {path:"cadastroLivro", component:CadastroComponent},
   {path:"cadastroUsuario", component:CadastroUsuarioComponent},
-  {path:"editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:id", component:EditarComponent},
-  {path:"editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:id", component:EditarUsuarioComponent},
+  {path:"editarLivro/:isbnLivro/:autorLivro/:tituloLivro/:qtdExemplares/:_id", component:EditarComponent},
+  {path:"editarUsuario/:cpf/:nome/:email/:telefone/:qtdLivrosEmprestados/:_id", component:EditarUsuarioComponent},
  // {path: "", redirectTo: "/noticias/", pathMatch: "full"}
 ];
 

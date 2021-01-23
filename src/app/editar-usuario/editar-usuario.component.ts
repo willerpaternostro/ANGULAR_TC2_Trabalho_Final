@@ -12,7 +12,7 @@ import { WillerService } from '../willer.service';
 })
 export class EditarUsuarioComponent implements OnInit {
   usuarioEditar: Usuario = {
-    id:'',
+    _id:'',
     cpf : '',
     nome : '',
     email : '',
@@ -50,7 +50,7 @@ export class EditarUsuarioComponent implements OnInit {
     this.usuarioEditar.email = this.email
     this.usuarioEditar.telefone = this.telefone
     this.usuarioEditar.qtdLivrosEmprestados = this.qtdLivrosEmprestados
-    this.usuarioEditar.id = this.id
+    this.usuarioEditar._id = this.id
   }
   editarUsuario(){
     console.log("Notícia publicada");
@@ -63,7 +63,7 @@ export class EditarUsuarioComponent implements OnInit {
     this.usuarioEditar.email = ""
     this.usuarioEditar.telefone = ""
     this.usuarioEditar.qtdLivrosEmprestados = 0
-    this.usuarioEditar.id = ""
+    this.usuarioEditar._id = ""
     this.router.navigateByUrl("/usuarios")
   }
 }

@@ -22,10 +22,10 @@ export class WillerService {
   }
 
   editarLivro(editarLivro:Livro):Observable<Livro>{
-    return this.http.put<Livro>("https://willergmp.glitch.me/api/biblioteca/"+editarLivro.id,{isbnLivro:editarLivro.isbnLivro,autorLivro:editarLivro.autorLivro,tituloLivro:editarLivro.tituloLivro,qtdExemplares:editarLivro.qtdExemplares});
+    return this.http.put<Livro>("https://willergmp.glitch.me/api/biblioteca/"+editarLivro._id,{isbnLivro:editarLivro.isbnLivro,autorLivro:editarLivro.autorLivro,tituloLivro:editarLivro.tituloLivro,qtdExemplares:editarLivro.qtdExemplares});
   }
   editarUsuario(editarUsuario:Usuario):Observable<Usuario>{
-    return this.http.put<Usuario>("https://willergmp.glitch.me/api/biblioteca/user/"+editarUsuario.id,{cpf:editarUsuario.cpf,nome:editarUsuario.nome, email:editarUsuario.email, telefone:editarUsuario.telefone,qtdLivrosEmprestados:editarUsuario.qtdLivrosEmprestados});
+    return this.http.put<Usuario>("https://willergmp.glitch.me/api/biblioteca/user/"+editarUsuario._id,{cpf:editarUsuario.cpf,nome:editarUsuario.nome, email:editarUsuario.email, telefone:editarUsuario.telefone,qtdLivrosEmprestados:editarUsuario.qtdLivrosEmprestados});
   }
 
   obterLivros():Observable<Livro[]>{
@@ -47,8 +47,9 @@ export class WillerService {
   }
   converterLivros(json_entrada:Livro):Livro{
     console.log(json_entrada)
+    
     let livroRetorno : Livro ={
-      id:json_entrada._id,
+      _id:json_entrada._id,
       isbnLivro:json_entrada.isbnLivro,
       autorLivro:json_entrada.autorLivro,
       tituloLivro:json_entrada.tituloLivro,
@@ -58,7 +59,7 @@ export class WillerService {
   }
   converterUsuarios(json_entrada:Usuario):Usuario{
     let user : Usuario = {
-      id:json_entrada._id,
+      _id:json_entrada._id,
       cpf :json_entrada.cpf , 
       nome :json_entrada.nome , 
       email :json_entrada.email , 

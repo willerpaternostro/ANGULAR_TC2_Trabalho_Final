@@ -12,14 +12,14 @@ import { WillerService } from '../willer.service';
 })
 export class EditarComponent implements OnInit {
   resultadoAdd:Livro = {
-    id:"",
+    _id:"",
     isbnLivro : '',
     autorLivro : '',
     tituloLivro : '',
     qtdExemplares : 0
   }
   livroEditar: Livro = {
-    id:"",
+    _id:"",
     isbnLivro : '',
     autorLivro : '',
     tituloLivro : '',
@@ -52,7 +52,7 @@ export class EditarComponent implements OnInit {
     this.livroEditar.autorLivro = this.autorLivro
     this.livroEditar.tituloLivro = this.tituloLivro
     this.livroEditar.qtdExemplares = this.qtdExemplares
-    this.livroEditar.id = this.id
+    this.livroEditar._id = this.id
   }
   editarLivro(){
     console.log("Notícia publicada");
@@ -64,7 +64,7 @@ export class EditarComponent implements OnInit {
     this.livroEditar.autorLivro = ""
     this.livroEditar.tituloLivro = ""
     this.livroEditar.qtdExemplares = 0
-    this.livroEditar.id = "",
+    this.livroEditar._id = "",
     this.router.navigateByUrl("/livros")
 
   }

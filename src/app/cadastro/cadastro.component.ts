@@ -11,14 +11,14 @@ import { WillerService } from '../willer.service';
 })
 export class CadastroComponent implements OnInit {
   resultadoAdd:Livro = {
-    id:'',
+    _id:'',
     isbnLivro : '',
     autorLivro : '',
     tituloLivro : '',
     qtdExemplares : 0
   }
   livroAdd: Livro = {
-    id:"",
+    _id:"",
     isbnLivro : '',
     autorLivro : '',
     tituloLivro : '',

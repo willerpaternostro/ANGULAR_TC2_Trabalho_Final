@@ -14,8 +14,8 @@
     <div class="col-2 text-center">(11)9 4954-9761</div>
     <div class="col-1">2</div>
     <div class="col-2 row">
-        <a routerLink="/editarUsuario/{{usuario.cpf}}/{{usuario.nome}}/{{usuario.email}}/{{usuario.telefone}}/{{usuario.qtdExemplares}}//{{usuario.id}}"  class="col-5 btn btn-warning">Editar</a>
-        <a (click)=" excluirUsuario(livro.id)" class="col-5 offset-1 btn btn-danger">Excluir</a>
+        <a routerLink="/editarUsuario/{{usuario.cpf}}/{{usuario.nome}}/{{usuario.email}}/{{usuario.telefone}}/{{usuario.qtdLivrosEmprestados}}/{{usuario._id}}"  class="col-5 btn btn-warning">Editar</a>
+        <a (click)=" excluirUsuario(usuario._id)" class="col-5 offset-1 btn btn-danger">Excluir</a>
     </div>
 </div>
     

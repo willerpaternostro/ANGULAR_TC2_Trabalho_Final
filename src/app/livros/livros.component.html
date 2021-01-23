@@ -14,8 +14,8 @@
     <div class="col-3">{{livro.tituloLivro}}</div>
     <div class="col-1">{{livro.qtdExemplares}}</div>
     <div class="col-2 row">
-        <a routerLink="/editarLivro/{{livro.isbnLivro}}/{{livro.autorLivro}}/{{livro.tituloLivro}}/{{livro.qtdExemplares}}/{{livro.id}}"  class="col-5 btn btn-warning">Editar</a>
-        <a (click)=" excluirLivro(livro.id)" class="col-5 offset-1 btn btn-danger">Excluir</a>
+        <a routerLink="/editarLivro/{{livro.isbnLivro}}/{{livro.autorLivro}}/{{livro.tituloLivro}}/{{livro.qtdExemplares}}/{{livro._id}}"  class="col-5 btn btn-warning">Editar</a>
+        <a (click)=" excluirLivro(livro._id)" class="col-5 offset-1 btn btn-danger">Excluir</a>
     </div>
 </div>
 

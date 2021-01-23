@@ -9,7 +9,7 @@ import { WillerService } from '../willer.service';
 })
 export class CadastroUsuarioComponent implements OnInit {
   usuarioAdd: Usuario = {
-    id:'',
+    _id:'',
     cpf : '',
     nome : '',
     email : '',
@@ -17,7 +17,7 @@ export class CadastroUsuarioComponent implements OnInit {
     qtdLivrosEmprestados : 0,
   }
   resultadoAdd: Usuario = {
-    id:'',
+    _id:'',
     cpf : '',
     nome : '',
     email : '',
