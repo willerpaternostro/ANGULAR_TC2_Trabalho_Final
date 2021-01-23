@@ -18,7 +18,7 @@ export class WillerService {
     return this.http.post<Livro>("https://willergmp.glitch.me/api/biblioteca?",{isbnLivro:livroAdd.isbnLivro,autorLivro:livroAdd.autorLivro,tituloLivro:livroAdd.tituloLivro,qtdExemplares:livroAdd.qtdExemplares});
   }
   adicionarUsuario(usuarioAdd:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>("https://willergmp.glitch.me/api/biblioteca/user",{cpf:usuarioAdd.cpf,nome:usuarioAdd.nome, email:usuarioAdd.email, telefone:usuarioAdd.telefone,qtdLivrosEmprestados:usuarioAdd.qtdLivrosEmprestados});
+    return this.http.post<Usuario>("https://willergmp.glitch.me/api/biblioteca/user?",{cpf:usuarioAdd.cpf,nome:usuarioAdd.nome, email:usuarioAdd.email, telefone:usuarioAdd.telefone,qtdLivrosEmprestados:String(usuarioAdd.qtdLivrosEmprestados)});
   }
 
   editarLivro(editarLivro:Livro):Observable<Livro>{
@@ -43,7 +43,7 @@ export class WillerService {
     return this.http.delete<Livro>("https://willergmp.glitch.me/api/biblioteca/"+id)
   }
   excluirUsuario(id:string):Observable <Usuario>{
-    return this.http.delete<Usuario>("https://willergmp.glitch.me/biblioteca/user/"+id)
+    return this.http.delete<Usuario>("https://willergmp.glitch.me/api/biblioteca/user/"+id)
   }
   converterLivros(json_entrada:Livro):Livro{
     console.log(json_entrada)

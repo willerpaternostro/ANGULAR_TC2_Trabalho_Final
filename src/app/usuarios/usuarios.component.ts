@@ -14,13 +14,14 @@ export class UsuariosComponent implements OnInit {
   constructor(private servico: WillerService) { }
 
   ngOnInit(): void {
+    this.obterUsuarios()
   }
   obterUsuarios():void{
     this.servico.obterUsuarios().subscribe(res => { console.log(res),this.meusUsuarios = res})
   }
   excluirUsuario(id:string){
     if(confirm("Deseja mesmo excluir?"))
-      this.servico.excluirLivro(id).subscribe(res => {
+      this.servico.excluirUsuario(id).subscribe(res => {
         console.log(res),
         this.obterUsuarios()
       });

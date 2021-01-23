@@ -25,7 +25,7 @@ export class EditarUsuarioComponent implements OnInit {
   email : string = ''
   telefone : string =  ''
   qtdLivrosEmprestados : number = 0
-
+  mostarLoading:boolean=false
 
   constructor(
     private rota: ActivatedRoute,
@@ -43,7 +43,7 @@ export class EditarUsuarioComponent implements OnInit {
     this.email = String(this.rota.snapshot.paramMap.get("email"));
     this.telefone = String( this.rota.snapshot.paramMap.get("telefone"));
     this.qtdLivrosEmprestados = Number( this.rota.snapshot.paramMap.get("qtdLivrosEmprestados"));
-    this.id = String( this.rota.snapshot.paramMap.get("id"));
+    this.id = String( this.rota.snapshot.paramMap.get("_id"));
 
     this.usuarioEditar.cpf = this.cpf
     this.usuarioEditar.nome = this.nome
@@ -53,11 +53,13 @@ export class EditarUsuarioComponent implements OnInit {
     this.usuarioEditar._id = this.id
   }
   editarUsuario(){
-    console.log("Notícia publicada");
+    this.mostarLoading = false
+    console.log("editar usuário");
     this.servico.editarUsuario(this.usuarioEditar).subscribe(res => {console.log(res),this.retorno()});
   }
   retorno():void{
     alert("Livro editado com sucesso!"),
+    this.mostarLoading = false
     this.usuarioEditar.cpf = ""
     this.usuarioEditar.nome = ""
     this.usuarioEditar.email = ""
